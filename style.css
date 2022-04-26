@@ -24,29 +24,6 @@ body {
   font-family: "Fredericka the Great";
 }
 
-.button {
-  background-color: var(--fourth);
-  color: var(--first);
-  font-size: 20px;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 10px;
-  border: 1px solid var(--fourth);
-
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 30px;
-  padding-right: 30px;
-
-  margin-right: 5px;
-}
-
-.button:hover {
-  background-color: var(--fifth);
-  color: var(--sixth);
-  transition: all 0.5s;
-}
-
 .btn {
   background-color: var(--fourth);
   color: var(--first);
@@ -247,6 +224,7 @@ dt {
 .answer {
   font-size: 20px;
   overflow: hidden;
+  padding-left: 45px;
 }
 
 .answer-hidden {

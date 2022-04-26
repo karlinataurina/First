@@ -1,3 +1,63 @@
+const handleQuestionClick = (entryQuestion, entryAnswer) => {
+    handleHideOtherQuestions(entryAnswer);
+
+    handleOpenQuestion(entryQuestion);
+    handleOpenAnswer(entryAnswer);
+};
+
+const getAllAnswers = () => {
+    return document.querySelectorAll("#faq .question-container .answer");
+};
+
+const getAllQuestions = () => {
+    return document.querySelectorAll(
+        "#faq .question-container .question"
+    );
+}
+
+const openAll = () => {
+    const answers = getAllAnswers();
+    const questions = getAllQuestions()
+    console.log(answers);
+    answers.forEach((answer) => {
+        // answer.style.maxHeight = "initial";
+        answer.classList.remove("answer-hidden");
+    });
+
+    questions.forEach((q) => {
+        q.classList.add("bottom");
+    });
+};
+
+const closeAll = () => {
+    const answers = getAllAnswers();
+    const questions = getAllQuestions()
+    answers.forEach((answer) => {
+        answer.classList.add("answer-hidden");
+    });
+    questions.forEach((question) => {
+        question.classList.remove("bottom");
+        question.classList.add("right");
+    });
+};
+
+const targetQ = document.getElementById("faq");
+const buttonToggleAll = document.getElementById("toggle-all");
+
+let stateOfToggle = "closed";
+
+buttonToggleAll.onclick = function () {
+    if (stateOfToggle === "closed") {
+        openAll();
+        stateOfToggle = "opened";
+        buttonToggleAll.innerHTML = "Close all";
+    } else if (stateOfToggle === "opened") {
+        closeAll();
+        stateOfToggle = "closed";
+        buttonToggleAll.innerHTML = "Open all";
+    }
+};
+
 /* HELPER FUNCTIONS */
 
 // Toggle CSS class to show question in HTML
@@ -78,43 +138,36 @@ const faqList = () => {
         {
             question: ` Why do people become vegan?`,
             answer: `<p>1) Prevention of Animal Suffering<br>
-            Most farm animals are raised on factory farms and experience appalling cruelties throughout
-            their lives. Animal slaughter is invariably gory and disturbing to witness, and often the
-            animals are clearly frightened and seem to know their death is imminent.</p>
-
-        <p>2) Health Benefits<br>
-            A vegan diet can eliminate many of your diet's most unhealthful foods, replacing them with
-            delicious, nutrient-rich fruits and vegetables, whole grains, beans, and nuts.</p>
-
-        <p>3) Environmental Advantages<br>
-            Given the staggering amounts of methane produced by livestock, a vegan diet may offer the
-            easiest and most effective way to reduce our contribution to climate change. Vegan diets can
-            also dramatically reduce land devoted to crops and to pasture, since growing food for farmed
-            animals is extraordinarily wasteful compared to growing crops directly for people.</p>`,
+              Most farm animals are raised on factory farms and experience appalling cruelties throughout
+              their lives. Animal slaughter is invariably gory and disturbing to witness, and often the
+              animals are clearly frightened and seem to know their death is imminent.</p>
+  
+          <p>2) Health Benefits<br>
+              A vegan diet can eliminate many of your diet's most unhealthful foods, replacing them with
+              delicious, nutrient-rich fruits and vegetables, whole grains, beans, and nuts.</p>
+  
+          <p>3) Environmental Advantages<br>
+              Given the staggering amounts of methane produced by livestock, a vegan diet may offer the
+              easiest and most effective way to reduce our contribution to climate change. Vegan diets can
+              also dramatically reduce land devoted to crops and to pasture, since growing food for farmed
+              animals is extraordinarily wasteful compared to growing crops directly for people.</p>`,
         },
         {
             question: ` How hard is it really to become vegan?`,
             answer: `<p>Nearly every single vegan you ask will tell you the transition was much easier than they
-            expected. While becoming vegan may sound difficult right now, you'll no doubt be shocked by how
-            easy this is.</p>`,
+              expected. While becoming vegan may sound difficult right now, you'll no doubt be shocked by how
+              easy this is.</p>`,
         },
     ];
 
     /*
-    --- BY USING document.createElement WE WOULD LIKE TO RE-CREATE BASIC QA STRUCTURE:
-    <div class="question-container">
-        <div class="question">QUESTION</div>
-        <div class="answer">ANSWER</div>
-    </div>
-    */
+      --- BY USING document.createElement WE WOULD LIKE TO RE-CREATE BASIC QA STRUCTURE:
+      <div class="question-container">
+          <div class="question">QUESTION</div>
+          <div class="answer">ANSWER</div>
+      </div>
+      */
     const faqContainer = getFaqListContainer();
-
-    const handleQuestionClick = (entryQuestion, entryAnswer) => {
-        handleHideOtherQuestions(entryAnswer);
-
-        handleOpenQuestion(entryQuestion);
-        handleOpenAnswer(entryAnswer);
-    };
 
     faqData.forEach((faqEntry) => {
         const { question, answer } = faqEntry;
