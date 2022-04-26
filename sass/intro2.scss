@@ -1,0 +1,33 @@
+@use "variables.scss" as v;
+@use "mixins.scss" as m;
+
+/* INTRO SLIDE START 2*/
+.intro2 {
+  height: 75vh;
+  background: linear-gradient(
+      rgba(155, 146, 146, 0.65),
+      rgba(119, 32, 80, 0.472)
+    ),
+    url("dessert2.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; /* creates cool parallax scrolling effect */
+
+  @include m.centered();
+}
+
+.main-heading2 {
+  font-size: v.$f85;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.intro-description2 {
+  color: v.$fifth;
+  text-align: center;
+  font-size: v.$f25;
+
+  padding-left: 100px;
+  padding-right: 100px;
+}
+/* INTRO SLIDE END 2*/

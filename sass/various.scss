@@ -1,0 +1,80 @@
+@use "variables.scss" as v;
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* REUSABLE STYLINGS START */
+body {
+  background-color: v.$first;
+  font-family: "Work Sans", sans-serif;
+  font-weight: bold;
+}
+
+.main-heading,
+.main-heading2,
+.main-heading3 {
+  font-family: "Fredericka the Great";
+}
+
+.btn {
+  background-color: v.$fourth;
+  color: v.$first;
+  font-size: v.$f20;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 1px solid v.$fourth;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: 5px;
+
+//before  ".btn:hover" was a whole new class thing, but now it's nested into "btn" class.
+  &:hover {
+    background-color: v.$fifth;
+    color: v.$sixth;
+    transition: all 0.5s;
+  }
+}
+
+dt {
+  text-transform: uppercase;
+  font-family: "Fredericka the Great";
+  letter-spacing: 5px;
+}
+
+/* REUSABLE STYLINGS  END */
+/* Media */
+@media (max-width: 1300px) {
+  .intro2 {
+    height: 95vh;
+  }
+
+  .intro3 {
+    height: 85vh;
+  }
+}
+@media (max-width: 1025px) {
+  .intro2 {
+    height: 140vh;
+  }
+
+  .intro3 {
+    height: 95vh;
+  }
+}
+@media (max-height: 897px) {
+  .intro {
+    height: 95vh;
+  }
+
+  .intro2 {
+    height: 200vh;
+  }
+
+  .intro3 {
+    height: 125vh;
+  }
+}
