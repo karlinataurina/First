@@ -1,0 +1,79 @@
+/* LEARN MORE START */
+.learn-more {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+/* LEARN MORE END */
+
+/* FAQ START */
+.faq {
+  background-color: var(--first);
+
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.question {
+  border: solid transparent;
+  font-size: 25px;
+  font-family: "Fredericka the Great";
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.question:hover {
+  border: solid var(--fourth);
+}
+
+.question::before {
+  border-style: solid;
+  border-color: var(--fourth);
+  border-width: 0.25em 0.25em 0 0;
+  content: "";
+  display: inline-block;
+  height: 0.45em;
+  left: 0.15em;
+  position: relative;
+  top: 0.15em;
+  transform: rotate(45deg);
+  vertical-align: top;
+  width: 0.45em;
+  margin-right: 15px;
+  transition: all 0.2s;
+}
+
+.question.right::before {
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.question.bottom::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.question.left::before {
+  left: 0.25em;
+  transform: rotate(-135deg);
+}
+
+.answer {
+  font-size: 20px;
+  overflow: hidden;
+  padding-left: 45px;
+}
+
+.answer-hidden {
+  max-height: 0px;
+}
+
+.answer-visible {
+  height: fit-content;
+  overflow: visible;
+}
+
+/* FAQ END */

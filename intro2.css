@@ -1,0 +1,32 @@
+/* INTRO SLIDE START 2*/
+.intro2 {
+  height: 75vh;
+  background: linear-gradient(
+      rgba(155, 146, 146, 0.65),
+      rgba(119, 32, 80, 0.472)
+    ),
+    url("dessert2.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; /* creates cool parallax scrolling effect */
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main-heading2 {
+  font-size: 85px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.intro-description2 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 25px;
+
+  padding-left: 100px;
+  padding-right: 100px;
+}
+/* INTRO SLIDE END 2*/

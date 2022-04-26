@@ -1,0 +1,28 @@
+/* INTRO SLIDE START */
+.intro {
+  height: 65vh;
+  background: url("watermelon.webp");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; /* creates cool parallax scrolling effect */
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main-heading {
+  font-size: 85px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.intro-description {
+  font-family: "Fredericka the Great";
+  text-align: center;
+  font-size: 25px;
+
+  padding-left: 100px;
+  padding-right: 100px;
+}
+/* INTRO SLIDE END */
