@@ -50,11 +50,11 @@ buttonToggleAll.onclick = function () {
     if (stateOfToggle === "closed") {
         openAll();
         stateOfToggle = "opened";
-        buttonToggleAll.innerHTML = "Close all";
+        buttonToggleAll.innerHTML = "Close all questions";
     } else if (stateOfToggle === "opened") {
         closeAll();
         stateOfToggle = "closed";
-        buttonToggleAll.innerHTML = "Open all";
+        buttonToggleAll.innerHTML = "Open all questions";
     }
 };
 
