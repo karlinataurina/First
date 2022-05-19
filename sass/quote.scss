@@ -1,10 +1,7 @@
-@use "variables.scss" as v;
-
 /* QUOTE START */
 .quote-container {
-  background-color: v.$first;
+  background-color: #edb6c2;
   text-align: center;
-
   padding-top: 100px;
   padding-bottom: 100px;
   padding-left: 100px;
@@ -12,11 +9,11 @@
 }
 
 .quote {
-  font-size: v.$f30;
+  font-size: 30px;
   margin-bottom: 20px;
 }
 
 .author {
-  font-size: v.$f20;
+  font-size: 20px;
 }
 /* QUOTE END */

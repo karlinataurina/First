@@ -1,7 +1,11 @@
-/* INTRO SLIDE START */
-.intro {
-  height: 65vh;
-  background: url("watermelon.webp");
+/* RECIPE SLIDE START */
+.recipe {
+  height: 90vh;
+  background: linear-gradient(
+      rgba(155, 146, 146, 0.65),
+      rgba(119, 32, 80, 0.472)
+    ),
+    url("dessert2.jpg");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -11,18 +15,21 @@
   flex-direction: column;
 }
 
-.intro-heading {
+.recipe-heading {
   font-size: 85px;
   margin-bottom: 20px;
   text-align: center;
 }
 
-.intro-description {
-  font-family: "Fredericka the Great";
+.recipe-description {
+  color: #ffffff;
   text-align: center;
   font-size: 25px;
   padding-left: 100px;
   padding-right: 100px;
 }
 
-/* INTRO SLIDE END */
+ul {
+  list-style: none;
+}
+/* RECIPE SLIDE END */

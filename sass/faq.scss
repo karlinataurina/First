@@ -1,17 +1,6 @@
-@use "variables.scss" as v;
-
-/* LEARN MORE START */
-.learn-more {
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-}
-/* LEARN MORE END */
-
 /* FAQ START */
 .faq {
-  background-color: v.$first;
-
+  background-color: #edb6c2;
   padding-top: 40px;
   padding-bottom: 40px;
   padding-left: 100px;
@@ -20,21 +9,19 @@
 
 .question {
   border: solid transparent;
-  font-size: v.$f25;
+  font-size: 25px;
   font-family: "Fredericka the Great";
   letter-spacing: 3px;
   text-transform: uppercase;
   cursor: pointer;
-  //before  "question:hover" was a whole new class thing, but now it's nested into "question" class.
-
-  &:hover {
-    border: solid v.$fourth;
-  }
+}
+.question:hover {
+  border: solid #7f3e59;
 }
 
 .question::before {
   border-style: solid;
-  border-color: v.$fourth;
+  border-color: #7f3e59;
   border-width: 0.25em 0.25em 0 0;
   content: "";
   display: inline-block;
@@ -65,18 +52,15 @@
 }
 
 .answer {
-  font-size: v.$f20;
+  font-size: 20px;
   overflow: hidden;
   padding-left: 45px;
-
-//before in CSS it was ".answer-hidden
-  &-hidden {
-    max-height: 0px;
-  }
-//before in CSS it was ".answer-visible
-  &-visible {
-    height: fit-content;
-    overflow: visible;
-  }
+}
+.answer-hidden {
+  max-height: 0px;
+}
+.answer-visible {
+  height: fit-content;
+  overflow: visible;
 }
 /* FAQ END */

@@ -1,0 +1,41 @@
+/* RECIPE2 SLIDE START */
+.recipe2 {
+  height: 75vh;
+  background: linear-gradient(
+      rgba(155, 146, 146, 0.65),
+      rgba(119, 32, 80, 0.472)
+    ),
+    url("granola.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  /* creates cool parallax scrolling effect */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.recipe-heading2 {
+  font-size: 85px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.recipe-description2 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 25px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.beginnings {
+  text-decoration: none;
+  color: #ffffff;
+}
+.beginnings:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* RECIPE2 SLIDE END */

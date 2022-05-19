@@ -1,7 +1,55 @@
-@use "faq.scss" as faq;
-@use "intro.scss" as intro;
-@use "intro2.scss" as intro2;
-@use "intro3.scss" as intro3;
-@use "quote.scss" as quote;
-@use "various.scss" as various;
-@use "video.scss" as video;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #edb6c2;
+  font-family: "Work Sans", sans-serif;
+  font-weight: bold;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fredericka the Great";
+}
+
+.ingredients {
+  font-family: "Fredericka the Great";
+  letter-spacing: 3px;
+}
+
+/* Media */
+@media (max-width: 1300px) {
+  .intro2 {
+    height: 95vh;
+  }
+
+  .intro3 {
+    height: 85vh;
+  }
+}
+
+@media (max-width: 1025px) {
+  .intro2 {
+    height: 140vh;
+  }
+
+  .intro3 {
+    height: 95vh;
+  }
+}
+
+@media (max-height: 897px) {
+  .intro {
+    height: 95vh;
+  }
+
+  .intro2 {
+    height: 200vh;
+  }
+
+  .intro3 {
+    height: 125vh;
+  }
+}

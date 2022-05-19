@@ -5,18 +5,10 @@
   "main": "first.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass sass/main.scss styles.css --watch"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/karlinataurina/First.git"
+    "sass": "sass sass/styles.scss styles.css --watch"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/karlinataurina/First/issues"
-  },
-  "homepage": "https://github.com/karlinataurina/First#readme",
   "dependencies": {
     "sass": "^1.51.0"
   }
