@@ -1,3 +1,5 @@
+@use "variables.scss" as v;
+@use "helpers.scss" as h;
 /* RECIPE2 SLIDE START */
 .recipe2 {
   height: 75vh;
@@ -10,32 +12,29 @@
   background-position: center center;
   background-attachment: fixed;
   /* creates cool parallax scrolling effect */
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  @include h.centered();
 }
 
 .recipe-heading2 {
-  font-size: 85px;
+  font-size: v.$f85;
   margin-bottom: 20px;
   text-align: center;
 }
 
 .recipe-description2 {
-  color: #ffffff;
+  color: v.$fifth;
   text-align: center;
-  font-size: 25px;
+  font-size: v.$f25;
   padding-left: 100px;
   padding-right: 100px;
 }
 
 .beginnings {
   text-decoration: none;
-  color: #ffffff;
+  color: v.$fifth;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
 }
-.beginnings:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
 /* RECIPE2 SLIDE END */

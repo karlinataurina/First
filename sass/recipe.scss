@@ -1,3 +1,5 @@
+@use "variables.scss" as v;
+@use 'helpers.scss' as h;
 /* RECIPE SLIDE START */
 .recipe {
   height: 90vh;
@@ -10,21 +12,19 @@
   background-position: center center;
   background-attachment: fixed;
   /* creates cool parallax scrolling effect */
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  @include h.centered();
 }
 
 .recipe-heading {
-  font-size: 85px;
+  font-size: v.$f85;
   margin-bottom: 20px;
   text-align: center;
 }
 
 .recipe-description {
-  color: #ffffff;
+  color: v.$fifth;
   text-align: center;
-  font-size: 25px;
+  font-size: v.$f25;
   padding-left: 100px;
   padding-right: 100px;
 }

@@ -1,9 +1,10 @@
+@use "variables.scss" as v;
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #edb6c2;
+  background-color: v.$first;
   font-family: "Work Sans", sans-serif;
   font-weight: bold;
 }

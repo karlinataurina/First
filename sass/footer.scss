@@ -1,3 +1,4 @@
+@use "variables.scss" as v;
 /* FOOTER */
 .footer {
   font-family: "Fredericka the Great";
@@ -9,14 +10,14 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #7f3e59;
-  color: #ffffff;
+  background-color: v.$fourth;
+  color: v.$fifth;
   text-align: center;
 }
 
 .fa-linkedin {
-  background: #007bb5;
-  color: #ffffff;
+  background: v.$seventh;
+  color: v.$fifth;
   margin: 3px;
   padding: 3px;
 }

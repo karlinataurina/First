@@ -1,6 +1,7 @@
+@use "variables.scss" as v;
 /* VIDEO START */
 .video {
-  background-color: #7f3e59;
+  background-color: v.$fourth;
   padding-top: 100px;
   padding-bottom: 100px;
   padding-left: 100px;
@@ -10,8 +11,8 @@
   flex-direction: column;
 }
 .video-heading {
-  color: #000000;
-  font-size: 30px;
+  color: v.$sixth;
+  font-size: v.$f30;
   text-transform: uppercase;
   font-family: "Fredericka the Great";
   letter-spacing: 5px;
