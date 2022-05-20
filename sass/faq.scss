@@ -20,52 +20,51 @@
   &:hover {
     border: solid v.$fourth;
   }
+}
 
-  .question::before {
-    border-style: solid;
-    border-color: v.$fourth;
-    border-width: 0.25em 0.25em 0 0;
-    content: "";
-    display: inline-block;
-    height: 0.45em;
-    left: 0.15em;
-    position: relative;
-    top: 0.15em;
-    transform: rotate(45deg);
-    vertical-align: top;
-    width: 0.45em;
-    margin-right: 15px;
-    transition: all 0.2s;
+.question::before {
+  border-style: solid;
+  border-color: v.$fourth;
+  border-width: 0.25em 0.25em 0 0;
+  content: "";
+  display: inline-block;
+  height: 0.45em;
+  left: 0.15em;
+  position: relative;
+  top: 0.15em;
+  transform: rotate(45deg);
+  vertical-align: top;
+  width: 0.45em;
+  margin-right: 15px;
+  transition: all 0.2s;
+}
+
+.question.right::before {
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.question.bottom::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.question.left::before {
+  left: 0.25em;
+  transform: rotate(-135deg);
+}
+
+.answer {
+  font-size: v.$f20;
+  overflow: hidden;
+  padding-left: 45px;
+  //before in CSS it was ".answer-hidden
+  &-hidden {
+    max-height: 0px;
   }
-
-  .question.right::before {
-    left: 0;
-    transform: rotate(45deg);
+  //before in CSS it was ".answer-visible
+  &-visible {
+    height: fit-content;
+    overflow: visible;
   }
-
-  .question.bottom::before {
-    top: 0;
-    transform: rotate(135deg);
-  }
-
-  .question.left::before {
-    left: 0.25em;
-    transform: rotate(-135deg);
-  }
-
-  .answer {
-    font-size: v.$f20;
-    overflow: hidden;
-    padding-left: 45px;
-    //before in CSS it was ".answer-hidden
-    &-hidden {
-      max-height: 0px;
-    }
-    //before in CSS it was ".answer-visible
-    &-visible {
-      height: fit-content;
-      overflow: visible;
-    }
-  }
-
-  /* FAQ END */
+}
